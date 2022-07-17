@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {font-family: Cambria, sans-serif;}
+
+    .navbar{
+        width: 100%;
+        overflow: auto;
+        background-color: gray;
+    }
+
+    .navbar a{
+        float: left;
+        padding: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        /*the padding and font size change the size of the nav bar*/
+    }
+
+    .navbar a:hover {
+        background-color: black;
+    }
+
+    .active{
+        background-color: gray;
+    }
+
+    @media screen and (max-midth: 500px) {
+        .navbar a{
+            float: none;
+            display: block;
+        }
+    }
+    
+</style>
+<head>
+    <title>&#128161 LiteracyLearners</title>
+</head>
+<body style="background-color:darkcyan">
+    <h1>&#128161 LiteracyLearners</h1>
+    <div class="navbar">
+        <a class="tablinks" onclick="openSeseame(event, 'Home')" id="defaultOpen">Home</a>
+        <a class="tablinks" onclick="openSeseame(event, 'Product')">Product</a>
+        <a class="tablinks" onclick="openSeseame(event, 'Team')">Team</a>
+      </div>
+       
+      <div id="Home" class="tabcontent">
+        <h3 style="font-size:30px"> Over 770 Million People Remain Illiterate Worldwide (UNESCO).</h3>
+        <p style="font-size:20px">&#128161 LiteracyLearners is an app prototype that aims to help illiterate youth and adults learn to recognize words they come across in their daily lives.</p>
+        <p style="font-size:20px">LiteracyLearners was submitted to Recess Hacks 2022. For more information on the product and how it works, check out the following video and explore the website.</p>
+      </div>
+       
+      <div id="Product" class="tabcontent">
+        <h3 style="font-size:30px">LiteracyLearners: An App That Fights Barriers That Arise From Illiteracy.</h3>
+        <p style="font-size:20px">Click on the LiteracyLearners app icon to access the Figma prototype.</p>
+        <img src="phone.jpg" alt="homescreen" usemap="#homescreen" width="558px" height="976px">
+        <map name="#homescreen">
+          <area shape="rect" coords="120, 120, 200, 200" alt="app" href="https://www.figma.com/proto/fYUXAUNTZRa1Z411JPOqHr/LiteracyLearner?node-id=0%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=0%3A3" target="_blank">
+        </map>
+      </div>
+       
+      <div id="Team" class="tabcontent">
+        <h3 style="font-size:30px">LiteracyLearners Team</h3>
+        <p style="font-size:20px">Tiffany Yang (15) - Coded Website (using HTML and Visual Studio Code)</p>
+        <p style="font-size:20px">Sophia Yang (17) - Designed App and UI/UX (using Figma)</p>
+      </div>
+
+    <script>
+        function openSeseame(event, slayApp) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(slayApp).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+         
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+         
+</body>
+</html>
